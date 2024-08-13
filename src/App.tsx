@@ -1,3 +1,7 @@
+import AriaChart from "./components/AriaChart";
+import BaChart from "./components/BaChart";
+import DoughnutChart from "./components/DoughNut";
+import LyneChart from "./components/LyneChart";
 import Navbar from "./components/Navbar";
 import Notifications from "./components/Notifications";
 
@@ -23,6 +27,11 @@ export default function App() {
           <hr className='w-full border-gray-300 border-t-1 mb-4 mx-2'/>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Charts here */}
+            <BaChart />
+            <AriaChart />
+            <LyneChart />
+            <DoughnutChart />
+
           </div>
         </div>
       </div>
