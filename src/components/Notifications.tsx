@@ -2,7 +2,7 @@ import { FaUser, FaInfoCircle, FaWeight,FaAlgolia } from 'react-icons/fa';
 import { CiLight } from "react-icons/ci";
 import { MdBatteryAlert } from "react-icons/md";
 import { useState } from 'react';
-import Modal from './Modal';
+import Modal from './Modal'
 
 export default function Notifications() {
     const [isModalOpen, setModalOpen] = useState(false);
