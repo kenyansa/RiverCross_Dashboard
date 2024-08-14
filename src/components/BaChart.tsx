@@ -1,4 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import ChartButton from './ChartButton';
 
 const data = [
   { location: 'Nairobi', expenditure: 4000, Sales: 5400, Profit: 1400 },
@@ -9,12 +10,15 @@ const data = [
 ];
 
 export default function BaChart() {
+    const handleButtonClick = () => {
+        console.log('Button clicked');
+      };
   return (
-    <div className='bg-blue-50 rounded-lg p-6 m-4'>
-      <h2 className="text-center text-2xl font-semibold text-gray-800 mb-6">Sales Data by Location</h2>
-      <ResponsiveContainer width="100%" height={200}>
-        <BarChart data={data} margin={{top: 20, right: 30, left: 20, bottom: 5}}>
-        <CartesianGrid strokeDasharray="3 3" />
+    <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
+      <h2 className="text-center text-xl font-semibold text-gray-800 mb-4">Bar Chart Data by Location</h2>
+      <ResponsiveContainer width="100%" height={180}>
+        <BarChart data={data} margin={{top: 10, right: 20, left: 20, bottom: 10}}>
+          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="location" />
           <YAxis />
           <Tooltip />
@@ -24,6 +28,12 @@ export default function BaChart() {
           <Bar dataKey="Profit" fill="purple" />
         </BarChart>
       </ResponsiveContainer>
+      <div className="absolute bottom-2 right-4">
+        <ChartButton 
+          label="Current Status"
+          onClick={handleButtonClick}
+        />
+      </div>
     </div>
   );
 }
