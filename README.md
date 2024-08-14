@@ -11,5 +11,5 @@
 ### Screenshots:
 ![Full Dashboard](public/assets/fullDashboard.PNG)
 ![Modal with API data](public/assets/modalWithApiData.PNG)
-![Mobile view](public/ssets/mobileView.PNG)
+![Mobile view](public/assets/mobileView.PNG)
 ![Mobile view 2](public/assets/mobile2.PNG)
