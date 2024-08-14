@@ -10,28 +10,32 @@ const data = [
 ];
 
 export default function BaChart() {
-    const handleButtonClick = () => {
-        console.log('Button clicked');
-      };
+  const handleButtonClick = () => {
+    console.log('Button clicked');
+  };
+
   return (
-    <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
-      <h2 className="text-xl font-bold text-blue-800 mb-4">Sample Bar Chart</h2>
-      <ResponsiveContainer width="100%" height={180}>
-        <BarChart data={data} margin={{top: 10, right: 20, left: 20, bottom: 10}}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="location" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="Sales" fill="#8884d8" />
-          <Bar dataKey="expenditure" fill="green" />
-          <Bar dataKey="Profit" fill="purple" />
-        </BarChart>
-      </ResponsiveContainer>
-      <div className="absolute bottom-2 right-4">
+    <div className='bg-blue-50 rounded-lg p-4 m-2 relative flex flex-col items-center'>
+      <h2 className="text-xl font-bold text-blue-800 mb-4 text-center">Sample Bar Chart</h2>
+      <div className="w-full">
+        <ResponsiveContainer width="100%" height={180}>
+          <BarChart data={data} margin={{ top: 10, right: 20, left: 20, bottom: 10 }}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="location" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="Sales" fill="#8884d8" />
+            <Bar dataKey="expenditure" fill="green" />
+            <Bar dataKey="Profit" fill="purple" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="w-full flex justify-end mt-4">
         <ChartButton 
           label="Current Status"
           onClick={handleButtonClick}
+          className="px-4 py-2 text-sm md:text-base"
         />
       </div>
     </div>
