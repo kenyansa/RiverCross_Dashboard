@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import ChartButton from './ChartButton';
 
 const data = [
     { location: 'Nairobi', expenditure: 4000, Sales: 5400, Profit: 1400 },
