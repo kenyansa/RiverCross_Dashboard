@@ -9,6 +9,13 @@ interface Product {
   image: string;
 }
 
+const categories = [
+  "Men's Clothing",
+  "Electronics",
+  "Jewelry",
+  "Women's Clothing",
+];
+
 export default function Modal({ onClose }: { onClose: () => void }) {
   const [products, setProducts] = useState<Product[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +23,7 @@ export default function Modal({ onClose }: { onClose: () => void }) {
   const [userInput, setUserInput] = useState({
     name: '',
     email: '',
-    comments: '',
+    selectedCategory: categories[0], // Default to the first category
   });
 
   useEffect(() => {
@@ -33,7 +40,7 @@ export default function Modal({ onClose }: { onClose: () => void }) {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setUserInput({ ...userInput, [name]: value });
   };
@@ -52,7 +59,7 @@ export default function Modal({ onClose }: { onClose: () => void }) {
           <div className="text-center">
             <img src={currentProduct.image} alt={currentProduct.title} className="w-48 h-48 object-cover rounded-lg mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">{currentProduct.title}</h3>
-            <p className="text-lg  bg-slate-200 text-gray-700 mb-2">Category: {currentProduct.category}</p>
+            <p className="text-lg bg-slate-200 text-gray-700 mb-2">Category: {currentProduct.category}</p>
             <p className="text-lg font-semibold text-blue-600 mb-4">Price: ${currentProduct.price}</p>
           </div>
         ) : (
@@ -77,14 +84,20 @@ export default function Modal({ onClose }: { onClose: () => void }) {
             onChange={handleInputChange}
             className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="comments">Comments:</label>
-          <textarea
-            id="comments"
-            name="comments"
-            value={userInput.comments}
+          <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="category">Category:</label>
+          <select
+            id="category"
+            name="selectedCategory"
+            value={userInput.selectedCategory}
             onChange={handleInputChange}
             className="w-full px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          >
+            {categories.map((category, index) => (
+              <option key={index} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="flex justify-between mt-6">
           <button
@@ -112,4 +125,3 @@ export default function Modal({ onClose }: { onClose: () => void }) {
     </div>
   );
 }
-
