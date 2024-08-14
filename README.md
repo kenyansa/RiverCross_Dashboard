@@ -9,7 +9,7 @@
 ## Deployment:
 - Vercel
 ### Screenshots:
-![Full Dashboard](assets/fullDashboard.PNG)
-![Modal with API data](assets/modalWithApiData.PNG)
-![Mobile view](assets/mobileView.PNG)
-![Mobile view 2](assets/mobile2)
+![Full Dashboard](public/assets/fullDashboard.PNG)
+![Modal with API data](public/assets/modalWithApiData.PNG)
+![Mobile view](apublic/ssets/mobileView.PNG)
+![Mobile view 2](public/assets/mobile2)
