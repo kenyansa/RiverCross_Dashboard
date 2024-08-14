@@ -15,7 +15,7 @@ export default function LyneChart() {
       };
   return (
     <div className='bg-blue-50 rounded-lg p-6 m-4 relative'>
-      <h2 className="text-center text-2xl font-semibold text-gray-800 mb-4">Line Chart Data by Location</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Sample Line Chart</h2>
       <div style={{ paddingBottom: '50px' }}>
         <ResponsiveContainer width="100%" height={200}>
           <LineChart data={data} margin={{ top: 10, right: 30, left: 20, bottom: 5 }}>

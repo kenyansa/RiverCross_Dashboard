@@ -15,7 +15,7 @@ export default function BaChart() {
       };
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
-      <h2 className="text-center text-xl font-semibold text-gray-800 mb-4">Bar Chart Data by Location</h2>
+      <h2 className="text-xl font-semibold text-gray-800 mb-4">Sample Bar Chart</h2>
       <ResponsiveContainer width="100%" height={180}>
         <BarChart data={data} margin={{top: 10, right: 20, left: 20, bottom: 10}}>
           <CartesianGrid strokeDasharray="3 3" />
