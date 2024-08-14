@@ -11,7 +11,7 @@ export default function Notifications() {
           <div className="flex flex-col items-center p-4 shadow-lg rounded-lg">
             <div className="flex flex-col items-center space-y-2 mb-4">
               <FaUser className="text-4xl text-gray-400 w-20 h-20" />
-              <p className="text-2xl text-blue-900 font-semibold">Hi David, Welcome.</p>
+              <p className="text-2xl text-blue-900 font-bold">Hi David, welcome.</p>
             </div>
             <hr className='w-full border-gray-300 border-t-1 mb-4'/>
             <h2 className="text-xl text-gray-500 font-bold mb-4 text-center">RECENT NOTIFICATIONS</h2>

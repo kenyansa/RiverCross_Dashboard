@@ -24,7 +24,7 @@ export default function DoughnutChart() {
 
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
-      <h2 className="text-2xl font-semibold text-gray-800 mb-6">Assets Service Summary</h2>
+      <h2 className="text-2xl font-bold text-blue-800 mb-6">Assets Service Summary</h2>
       <div className="flex justify-between items-center mb-4">
         <div className="w-full flex justify-end">
           <select

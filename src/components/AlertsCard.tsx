@@ -6,7 +6,7 @@ export default function AlertsCard() {
 
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
-      <h2 className="text-xl font-semibold text-gray-800 mb-2">Alerts Summary</h2>
+      <h2 className="text-xl font-bold text-blue-800 mb-2">Alerts Summary</h2>
       <hr className="mb-4" />
       
       <div className="flex justify-end mb-4">
