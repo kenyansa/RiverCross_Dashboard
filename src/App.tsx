@@ -1,3 +1,4 @@
+import AlertsCard from "./components/AlertsCard";
 import AriaChart from "./components/AriaChart";
 import BaChart from "./components/BaChart";
 import DoughnutChart from "./components/DoughNut";
@@ -21,8 +22,8 @@ export default function App() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
             <BaChart />
-            <AriaChart />
             <LyneChart />
+            <BaChart />
           </div>
         </div>
 
@@ -31,8 +32,8 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
-            <BaChart />
-            <LyneChart />
+            <AriaChart />
+            <AlertsCard />
             <DoughnutChart />
           </div>
 
