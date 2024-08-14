@@ -11,7 +11,7 @@ export default function App() {
     <>
       <Navbar />
       <div className="pt-16 flex flex-col-reverse md:flex-row min-h-screen">
-        {/* Left Section: Dashboard Header and Charts */}
+        {/* Dashboard Header and Charts */}
         <div className="flex-1 p-4 md:w-3/4">
           <h1 className='text-3xl font-bold mb-2 mx-2'>DashBoard</h1>
           <hr className='w-full border-gray-300 border-t-1 mb-4' />
@@ -28,8 +28,7 @@ export default function App() {
 
         {/* Vertical Line Separator */}
         <div className="hidden md:block w-px bg-gray-300"></div>
-
-        {/* Right Section: Notifications */}
+        {/* RHS Component */}
         <div className='w-full md:w-1/4 p-4'>
           <Notifications />
         </div>
