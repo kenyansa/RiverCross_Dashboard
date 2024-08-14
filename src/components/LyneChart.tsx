@@ -14,7 +14,7 @@ export default function LyneChart() {
         console.log('Button clicked');
       };
   return (
-    <div className='bg-blue-50 rounded-lg p-6 m-4 relative'>
+    <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Sample Line Chart</h2>
       <div style={{ paddingBottom: '50px' }}>
         <ResponsiveContainer width="100%" height={200}>

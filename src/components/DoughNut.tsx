@@ -24,8 +24,8 @@ export default function DoughnutChart() {
   };
 
   return (
-    <div className='bg-blue-50 rounded-lg p-6 m-4 shadow-lg'>
-      <h2 className="text-center text-2xl font-semibold text-gray-800 mb-6">Business Metrics by Location</h2>
+    <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">Doughnut: Business Metrics by Location</h2>
       <div className="flex justify-center items-center">
         <div className="w-auto h-auto">
              <Doughnut data={data} />
