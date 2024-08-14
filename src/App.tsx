@@ -2,6 +2,7 @@ import AlertsCard from "./components/AlertsCard";
 import AriaChart from "./components/AriaChart";
 import BaChart from "./components/BaChart";
 import DoughnutChart from "./components/DoughNut";
+import FleetAndDatePicker from "./components/FleetAndDatePicker";
 import LyneChart from "./components/LyneChart";
 import Navbar from "./components/Navbar";
 import Notifications from "./components/Notifications";
@@ -28,7 +29,7 @@ export default function App() {
         </div>
 
         <div className='mx-2'>
-            <SearchAndDatePicker />
+            <FleetAndDatePicker />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">

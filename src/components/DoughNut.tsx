@@ -6,17 +6,16 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export default function DoughnutChart() {
   // Data for the Doughnut chart
   const data = {
-    labels: ['Nairobi', 'Mombasa', 'Kisumu', 'Eldoret', 'Nakuru'],
+    labels: ['In 1000km', 'Overdue', 'In 5000km', 'In 25000km'],
     datasets: [
       {
         label: 'Sales',
-        data: [5400, 4900, 4700, 4500, 5200],
+        data: [45, 50, 615, 610],
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#4BC0C0',
-          '#9966FF',
+          '#bfef4f',
+          '#930606',
+          '#faac35',
+          '#f22d11',
         ],
         borderWidth: 1,
       },
@@ -25,9 +24,9 @@ export default function DoughnutChart() {
 
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
-      <h2 className="text-2xl font-semibold text-gray-800 mb-6">Doughnut: Business Metrics by Location</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">Assets Service Summary</h2>
       <div className="flex justify-center items-center">
-        <div className="w-auto h-auto">
+        <div className="w-auto h-200">
              <Doughnut data={data} />
         </div>
       </div>
