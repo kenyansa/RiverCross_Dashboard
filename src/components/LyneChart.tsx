@@ -19,7 +19,7 @@ export default function LyneChart() {
 
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Sample Line Chart</h2>
+      <h2 className="text-2xl font-bold text-blue-800 mb-4">Sample Line Chart</h2>
       <div className="flex justify-end mb-4">
         <div className="flex items-center rounded border-2 border-gray-300 bg-white">
           <input

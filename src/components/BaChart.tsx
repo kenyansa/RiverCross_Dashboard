@@ -15,7 +15,7 @@ export default function BaChart() {
   };
 
   return (
-    <div className='bg-blue-50 rounded-lg p-4 m-2 relative flex flex-col items-center'>
+    <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
       <h2 className="text-xl font-bold text-blue-800 mb-4">Sample Bar Chart</h2>
       <div className="w-full">
         <ResponsiveContainer width="100%" height={180}>
