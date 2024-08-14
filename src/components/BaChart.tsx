@@ -16,7 +16,7 @@ export default function BaChart() {
 
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative flex flex-col items-center'>
-      <h2 className="text-xl font-bold text-blue-800 mb-4 text-center">Sample Bar Chart</h2>
+      <h2 className="text-xl font-bold text-blue-800 mb-4">Sample Bar Chart</h2>
       <div className="w-full">
         <ResponsiveContainer width="100%" height={180}>
           <BarChart data={data} margin={{ top: 10, right: 20, left: 20, bottom: 10 }}>
