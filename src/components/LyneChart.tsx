@@ -9,22 +9,32 @@ const data = [
   ];
 
 export default function LyneChart() {
+    const handleButtonClick = () => {
+        console.log('Button clicked');
+      };
   return (
-    <div className='bg-blue-50 rounded-lg p-6 m-4'>
-      <h2 className="text-center text-2xl font-semibold text-gray-800 mb-6">Line Chart Visualization by Location</h2>
-      <ResponsiveContainer width="100%" height={200}>
-        <LineChart data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-        <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="location" />
-          <YAxis yAxisId="left"/>
-          <YAxis yAxisId="right" orientation="right" />
-          <Tooltip />
-          <Legend />
-          <Line yAxisId="left" type="monotone" dataKey="Sales" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line yAxisId="left" type="monotone" dataKey="expenditure" stroke="green" activeDot={{ r: 8 }} />
-          <Line yAxisId="left" type="monotone" dataKey="Profit" stroke="purple" activeDot={{ r: 8 }}/>
-        </LineChart>
-      </ResponsiveContainer>
+    <div className='bg-blue-50 rounded-lg p-6 m-4 relative'>
+      <h2 className="text-center text-2xl font-semibold text-gray-800 mb-4">Line Chart Data by Location</h2>
+      <div style={{ paddingBottom: '50px' }}>
+        <ResponsiveContainer width="100%" height={200}>
+          <LineChart data={data} margin={{ top: 10, right: 30, left: 20, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="location" />
+            <YAxis />
+            <Tooltip />
+            <Legend verticalAlign="top" height={36} />
+            <Line type="monotone" dataKey="Sales" stroke="#8884d8" />
+            <Line type="monotone" dataKey="expenditure" stroke="green" />
+            <Line type="monotone" dataKey="Profit" stroke="purple" />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="absolute bottom-2 right-4">
+        <ChartButton 
+          label="Movement"
+          onClick={handleButtonClick}
+        />
+      </div>
     </div>
   )
 }
