@@ -2,20 +2,21 @@ import { useState } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import ChartButton from './ChartButton';
 
-// Sample data with two cars
+// Here, I have used sample data for two cars
 const data = [
   { day: 'Day 1', car1: 50, car2: 60 },
-  { day: 'Day 2', car1: 70, car2: 80 },
-  { day: 'Day 3', car1: 60, car2: 70 },
-  { day: 'Day 4', car1: 90, car2: 100 },
-  { day: 'Day 5', car1: 80, car2: 90 },
-  { day: 'Day 6', car1: 100, car2: 110 },
-  { day: 'Day 7', car1: 110, car2: 120 },
+  { day: 'Day 2', car1: 70, car2: 120 },
+  { day: 'Day 3', car1: 60, car2: 80 },
+  { day: 'Day 4', car1: 90, car2: 50 },
+  { day: 'Day 5', car1: 60, car2: 90 },
+  { day: 'Day 6', car1: 80, car2: 70 },
+  { day: 'Day 7', car1: 120, car2: 30 },
 ];
 
 export default function AriaChart() {
-    const [startDate, setStartDate] = useState<string | undefined>(undefined);
+  const [startDate, setStartDate] = useState<string | undefined>(undefined);
   const [endDate, setEndDate] = useState<string | undefined>(undefined);
+
   const handleButtonClick = () => {
     console.log('Button clicked');
   };
@@ -41,7 +42,7 @@ export default function AriaChart() {
         </div>
       </div>
       <ResponsiveContainer width="100%" height={300}>
-        <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+        <AreaChart data={data} margin={{ top: 10, right: 30, left: 20, bottom: 10 }}>
           <defs>
             <linearGradient id="colorCar1" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
@@ -53,8 +54,8 @@ export default function AriaChart() {
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" label={{ value: 'Days', position: 'insideBottomRight', offset: 0 }} />
-          <YAxis label={{ value: 'Mileage (Kms)', angle: -90, position: 'insideLeft', offset: 0 }} />
+          <XAxis dataKey="day" label={{ value: 'Days', position: 'insideBottomRight', offset: -5 }} />
+          <YAxis label={{ value: 'Mileage (Kms)', angle: -90, position: 'insideLeft', offset: 15 }} />
           <Tooltip />
           <Legend />
           <Area type="monotone" dataKey="car1" stroke="#8884d8" fillOpacity={1} fill="url(#colorCar1)" />
@@ -68,5 +69,5 @@ export default function AriaChart() {
         />
       </div>
     </div>
-  )
+  );
 }
