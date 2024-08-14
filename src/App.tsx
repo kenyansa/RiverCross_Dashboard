@@ -5,10 +5,7 @@ import LyneChart from "./components/LyneChart";
 import Navbar from "./components/Navbar";
 import Notifications from "./components/Notifications";
 
-
-
 export default function App() {
-
   return (
     <>
       <Navbar />
@@ -19,7 +16,7 @@ export default function App() {
         </div>
 
         {/* Vertical Line Separator */}
-        <div className="hidden md:block w-px bg-gray-300"></div>
+        <div className="w-1 bg-gray-300 border-t-1 h-full"></div>
 
         {/* Left Section: Dashboard Header and Charts */}
         <div className="flex-1 p-4 md:w-3/4">
@@ -31,13 +28,9 @@ export default function App() {
             <AriaChart />
             <LyneChart />
             <DoughnutChart />
-
           </div>
         </div>
       </div>
-        
     </>
-  )
+  );
 }
-
-
