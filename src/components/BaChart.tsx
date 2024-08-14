@@ -31,7 +31,7 @@ export default function BaChart() {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="w-full flex justify-end mt-4">
+      <div className="absolute bottom-2 right-4">
         <ChartButton 
           label="Current Status"
           onClick={handleButtonClick}

@@ -1,5 +1,4 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import ChartButton from './ChartButton';
 
 const data = [
     { location: 'Nairobi', expenditure: 4000, Sales: 5400, Profit: 1400 },
@@ -10,9 +9,6 @@ const data = [
   ];
 
 export default function AriaChart() {
-    const handleButtonClick = () => {
-        console.log('Button clicked');
-      };
   return (
     <div className='bg-blue-50 rounded-lg p-4 m-2 relative'>
       <h2 className="text-xl font-bold text-blue-800 mb-4">Sample Area Chart</h2>
@@ -27,12 +23,6 @@ export default function AriaChart() {
           <Area type="monotone" dataKey="Profit" fill="purple" />
         </AreaChart>
       </ResponsiveContainer>
-      <div className="absolute bottom-2 right-4">
-        <ChartButton 
-          label="Violations"
-          onClick={handleButtonClick}
-        />
-      </div>
     </div>
   )
 }
