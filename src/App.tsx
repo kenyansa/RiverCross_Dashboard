@@ -15,6 +15,7 @@ export default function App() {
         <div className="flex-1 p-4 md:w-3/4">
           <h1 className='text-3xl font-bold mb-2 mx-2'>DashBoard</h1>
           <hr className='w-full border-gray-300 border-t-1 mb-4' />
+          
           <div className='mx-2'>
             <SearchAndDatePicker />
           </div>
@@ -22,9 +23,18 @@ export default function App() {
             <BaChart />
             <AriaChart />
             <LyneChart />
-            <DoughnutChart />
           </div>
         </div>
+
+        <div className='mx-2'>
+            <SearchAndDatePicker />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+            <BaChart />
+            <LyneChart />
+            <DoughnutChart />
+          </div>
 
         {/* Vertical Line Separator */}
         <div className="hidden md:block w-px bg-gray-300"></div>
