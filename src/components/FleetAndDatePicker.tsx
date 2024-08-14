@@ -12,7 +12,7 @@ export default function FleetAndDatePicker() {
       <div className="flex items-center space-x-2">
         {/* Fleet Header */}
         <div className="flex items-center">
-          <h2 className='text-2xl font-semibold text-blue-950'>Fleet</h2>
+          <h2 className='text-2xl font-bold text-blue-950'>Fleet</h2>
         </div>
         
       </div>

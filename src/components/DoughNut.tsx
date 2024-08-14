@@ -9,7 +9,7 @@ export default function DoughnutChart() {
     labels: ['In 1000km', 'Overdue', 'In 5000km', 'In 25000km'],
     datasets: [
       {
-        label: 'Sales',
+        label: 'Distance',
         data: [45, 50, 615, 610],
         backgroundColor: [
           '#bfef4f',
